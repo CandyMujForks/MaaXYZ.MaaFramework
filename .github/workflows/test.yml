@@ -92,6 +92,9 @@ jobs:
         with:
           sdk-version: 22621
 
+      - run: |
+          winget install Microsoft.VCRedist.2015+.x64
+
       - name: Bootstrap MaaDeps
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
